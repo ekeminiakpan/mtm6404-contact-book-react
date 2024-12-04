@@ -1,41 +1,207 @@
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #f8fafc; /* Background color */
+  color: #f0073a; /* Text color */
+  line-height: 1.6;
+}
+
 #root {
-  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 980px;
   margin: 0 auto;
   padding: 2rem;
+}
+
+/* Button styles */
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary {
+  background-color: #5b21b6; /* Dark purple */
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #7c3aed; /* Hover color */
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #1e293b; /* Text color */
+  border: 1px solid #e2e8f0; /* Border color */
+}
+
+.btn-danger {
+  background-color: #ef4444; /* Danger color */
+  color: white;
+}
+
+.btn:hover {
+  opacity: 0.95;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Form styles */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #1e293b; /* Text color */
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e2e8f0; /* Border color */
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.8); /* Input background */
+  transition: border-color 0.2s;
+}
+
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #5b21b6; /* Dark purple */
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  justify-content: flex-end;
+}
+
+/* Contact list styles */
+.contact-header {
   text-align: center;
+  margin-bottom: 2rem;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search-container {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.search-box {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e2e8f0; /* Border color */
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.8); /* Input background */
 }
 
-.card {
-  padding: 2em;
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.read-the-docs {
-  color: #888;
+.contact-item {
+  padding: 1rem;
+  border: 1px solid #e2e8f0; /* Border color */
+  border-radius: 8px;
+  text-decoration: none;
+  color: #1e293b; /* Text color */
+  transition: all 0.2s;
+  background-color: white; /* Card background */
+}
+
+.contact-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.empty-contacts {
+  text-align: center;
+  padding: 3rem;
+  color: #64748b;
+  font-size: 1.1rem;
+}
+
+/* Contact details styles */
+.contact-details {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.button-group {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.contact-info {
+  background: white; /* Card background */
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.info-row {
+  display: flex;
+  padding: 1rem 0;
+  border-bottom: 1px solid #e2e8f0; /* Border color */
+}
+
+.info-row:last-child {
+  border-bottom: none;
+}
+
+.label {
+  font-weight: 600;
+  width: 120px;
+  color: #64748b;
+}
+
+.value {
+  flex: 1;
 }
